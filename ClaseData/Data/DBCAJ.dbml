@@ -1,0 +1,1065 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BDGCSJDB" Class="DBCAJDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.169.143.34;Initial Catalog=BDGCSJDB;Persist Security Info=True;User ID=MPY1115" SettingsObjectName="ClaseData.Properties.Settings" SettingsPropertyName="CAJBDConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.ADMSPS_EVENTOS_REGISTRADOS" Method="ADMSPS_EVENTOS_REGISTRADOS">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_EVENTOS_REGISTRADOSResult">
+      <Column Name="IdSolicitudEvento" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuarioConsultor" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdEvento" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdTarea" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ExpOrigen" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="NumExpediente" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="Juzgado" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Contraparte" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Propuesta" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RutaArchivo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TerminoInterno" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TerminoLegal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CAJDBSPS_ENVIO_CORREO" Method="CAJDBSPS_ENVIO_CORREO">
+    <Parameter Name="Correo" Parameter="correo" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Mensaje" Parameter="mensaje" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="Numero" Parameter="numero" Type="System.String" DbType="NVarChar(45)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.OBTENER_ULTIMO_ID_PRESPUESTA" Method="OBTENER_ULTIMO_ID_PRESPUESTA">
+    <ElementType Name="OBTENER_ULTIMO_ID_PRESPUESTAResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SOLSPI_ALTA_DOCUMENTO" Method="SOLSPI_ALTA_DOCUMENTO">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdConsultor" Parameter="idConsultor" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Requisicion" Parameter="requisicion" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TipoReq" Parameter="tipoReq" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPI_ALTA_PROPUESTA_RESPUESTA" Method="SOLSPI_ALTA_PROPUESTA_RESPUESTA">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdConsultor" Parameter="idConsultor" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Propuesta" Parameter="propuesta" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="cc.SOLSPI_ALTA_REGISTRO_EVALUACION_SERVICIO" Method="SOLSPI_ALTA_REGISTRO_EVALUACION_SERVICIO">
+    <Parameter Name="idCallCenter" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="p1" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="p2" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="p3" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="p4" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="p5" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="p6" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="p7" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Contacto" Parameter="contacto" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Observaciones" Parameter="observaciones" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPI_ALTA_SOLICITUD_INFORMACION" Method="SOLSPI_ALTA_SOLICITUD_INFORMACION">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdConsultor" Parameter="idConsultor" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdResponsable" Parameter="idResponsable" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Solicitud" Parameter="solicitud" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FechaVigencia" Parameter="fechaVigencia" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_ACTUALIZAR_PROPUESTA" Method="SOLSPU_ACTUALIZAR_PROPUESTA">
+    <Parameter Name="IdPropuesta" Parameter="idPropuesta" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Propuesta" Parameter="propuesta" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_ACTUALIZAR_SOLICITUD_INFORMACION" Method="SOLSPU_ACTUALIZAR_SOLICITUD_INFORMACION">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Respuesta" Parameter="respuesta" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_APROBACION_PROPUESTA" Method="SOLSPU_APROBACION_PROPUESTA">
+    <Parameter Name="Decision" Parameter="decision" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdPropuesta" Parameter="idPropuesta" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DescricpcionRechazo" Parameter="descricpcionRechazo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_ARCHIVO_INACTIVO" Method="SOLSPU_ARCHIVO_INACTIVO">
+    <Parameter Name="IdAdjunto" Parameter="idAdjunto" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="cc.SOLSPU_CIERRE_EVALUACION" Method="SOLSPU_CIERRE_EVALUACION">
+    <Parameter Name="idCallCenter" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_ENVIAR_APROBACION" Method="SOLSPU_ENVIAR_APROBACION">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Aprobacion" Parameter="aprobacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Registro" Parameter="registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdPropuesta" Parameter="idPropuesta" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_RECEPCION_OFICIALIA" Method="SOLSPU_RECEPCION_OFICIALIA">
+    <Parameter Name="idOficilia" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_RECEPCION_DOCUMENTO" Method="SOLSPU_RECEPCION_DOCUMENTO">
+    <Parameter Name="IdDocumento" Parameter="idDocumento" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_ENVIAR_A_APROBACION" Method="SOLSPU_ENVIAR_A_APROBACION">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdPropuesta" Parameter="idPropuesta" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPI_ALTA_PROPUESTA_RESPUESTA_CONTADOR" Method="SOLSPI_ALTA_PROPUESTA_RESPUESTA_CONTADOR">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdConsultor" Parameter="idConsultor" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Propuesta" Parameter="propuesta" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_ENVIAR_A_APROBACION_CONTADOR" Method="SOLSPU_ENVIAR_A_APROBACION_CONTADOR">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdPropuesta" Parameter="idPropuesta" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_ENVIAR_APROBACION_SUPERVISOR_CONTABILIDAD" Method="SOLSPU_ENVIAR_APROBACION_SUPERVISOR_CONTABILIDAD">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Aprobacion" Parameter="aprobacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdPropuesta" Parameter="idPropuesta" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.OBTENER_ULTIMO_ID_SOLICITUD_EVENTO" Method="OBTENER_ULTIMO_ID_SOLICITUD_EVENTO">
+    <ElementType Name="OBTENER_ULTIMO_ID_SOLICITUD_EVENTOResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SOLSPI_ALTA_USUARIO" Method="SOLSPI_ALTA_USUARIO">
+    <Parameter Name="IdUsuarioTipo" Parameter="idUsuarioTipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="APaterno" Parameter="aPaterno" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AMaterno" Parameter="aMaterno" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Usuario" Parameter="usuario" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Contraseña" Parameter="contraseña" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Correo" Parameter="correo" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="Extension" Parameter="extension" Type="System.String" DbType="NVarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPI_RUTA_ARCHIVO_ADJUNTO" Method="SOLSPI_RUTA_ARCHIVO_ADJUNTO">
+    <Parameter Name="idTabla" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="idFolio" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="idTipoDocumento" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ArchivoAdjunto" Parameter="archivoAdjunto" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUD_OFICIALIAS" Method="ADMSPS_SOLICITUD_OFICIALIAS">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUD_OFICIALIASResult">
+      <Column Name="IdOficialiaPartes" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpOrigen" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="NumExpediente" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="Juzgado" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Contraparte" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TipoJuicio" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Oficialia" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_INFORMACION" Method="ADMSPS_SOLICITUDES_INFORMACION">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_INFORMACIONResult">
+      <Column Name="IdSolicitudInformacion" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitud" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Estatus" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_VALIDAR_USUARIO" Method="ADMSPS_VALIDAR_USUARIO">
+    <Parameter Name="User" Parameter="user" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(45)" />
+    <ElementType Name="ADMSPS_VALIDAR_USUARIOResult">
+      <Column Name="IdUsuario" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuarioTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdMateria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="APaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="AMaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_DETALLE_SOLICITUD_INFORMACION_ENTREGA" Method="ADMSPS_DETALLE_SOLICITUD_INFORMACION_ENTREGA">
+    <Parameter Name="IdSolicitudInformacion" Parameter="idSolicitudInformacion" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLE_SOLICITUD_INFORMACION_ENTREGAResult">
+      <Column Name="Solicitud" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Respuesta" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RutaArchivo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FechaRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_DETALLES_OFICIALIA" Method="ADMSPS_DETALLES_OFICIALIA">
+    <Parameter Name="IdOficilia" Parameter="idOficilia" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLES_OFICIALIAResult">
+      <Column Name="ExpOrigen" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="NumExpediente" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="Juzgado" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Contraparte" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TipoJuicio" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Oficialia" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_PROPUESTAS_REGISTRADAS" Method="ADMSPS_PROPUESTAS_REGISTRADAS">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_PROPUESTAS_REGISTRADASResult">
+      <Column Name="IdPropuestaRespuesta" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Aprobada" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Coordinador" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Propuesta" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Archivo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Aprobacion" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="DescripcionRechazo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_RESPONSABLES_SOLICITUDES_TERMINADAS_GERENTE" Method="ADMSPS_RESPONSABLES_SOLICITUDES_TERMINADAS_GERENTE">
+    <ElementType Name="ADMSPS_RESPONSABLES_SOLICITUDES_TERMINADAS_GERENTEResult">
+      <Column Name="IdUsuario" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_RUTA_ARCHIVO_DICTAMEN" Method="ADMSPS_RUTA_ARCHIVO_DICTAMEN">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_RUTA_ARCHIVO_DICTAMENResult">
+      <Column Name="RutaArchivo" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="idArchivoAdjunto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_RUTA_ARCHIVO_RESOLUCION" Method="ADMSPS_RUTA_ARCHIVO_RESOLUCION">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_RUTA_ARCHIVO_RESOLUCIONResult">
+      <Column Name="RutaArchivo" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_RUTA_DOCUMENTO_REGISTRADO" Method="ADMSPS_RUTA_DOCUMENTO_REGISTRADO">
+    <Parameter Name="IdDocumento" Parameter="idDocumento" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_RUTA_DOCUMENTO_REGISTRADOResult">
+      <Column Name="RutaArchivo" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="idArchivoAdjunto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_RUTA_DOCUMENTO_REGISTRADO_EVENTO" Method="ADMSPS_RUTA_DOCUMENTO_REGISTRADO_EVENTO">
+    <Parameter Name="idSolicitudEvento" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_RUTA_DOCUMENTO_REGISTRADO_EVENTOResult">
+      <Column Name="RutaArchivo" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="idArchivoAdjunto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_RUTA_DOCUMENTO_REGISTRADO_OFICIALIA" Method="ADMSPS_RUTA_DOCUMENTO_REGISTRADO_OFICIALIA">
+    <Parameter Name="idOficialia" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_RUTA_DOCUMENTO_REGISTRADO_OFICIALIAResult">
+      <Column Name="RutaArchivo" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="idArchivoAdjunto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_LISTA_CONSULTORES" Method="ADMSPS_LISTA_CONSULTORES">
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_LISTA_CONSULTORESResult">
+      <Column Name="IdUsuario" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_LISTA_MATERIAS" Method="ADMSPS_LISTA_MATERIAS">
+    <ElementType Name="ADMSPS_LISTA_MATERIASResult">
+      <Column Name="IdMateria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Materia" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_LISTA_TAREAS" Method="ADMSPS_LISTA_TAREAS">
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdEvento" Parameter="idEvento" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_LISTA_TAREASResult">
+      <Column Name="IdTarea" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Tarea" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DiasTerminoInterno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_LISTA_TIPO_EVENTOS" Method="ADMSPS_LISTA_TIPO_EVENTOS">
+    <ElementType Name="ADMSPS_LISTA_TIPO_EVENTOSResult">
+      <Column Name="IdSolicitudTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_LISTA_TIPO_USUARIOS" Method="ADMSPS_LISTA_TIPO_USUARIOS">
+    <ElementType Name="ADMSPS_LISTA_TIPO_USUARIOSResult">
+      <Column Name="IdUsuarioTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_RUTA_PROPUESTA_REGISTRADO" Method="ADMSPS_RUTA_PROPUESTA_REGISTRADO">
+    <Parameter Name="IdPropuesta" Parameter="idPropuesta" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_RUTA_PROPUESTA_REGISTRADOResult">
+      <Column Name="RutaArchivo" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="idArchivoAdjunto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_LISTA_EVALUACIONES" Method="ADMSPS_LISTA_EVALUACIONES">
+    <ElementType Name="ADMSPS_LISTA_EVALUACIONESResult">
+      <Column Name="idTipoEvaluacion" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Evaluacion" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_DETALLE_EVALUACION_SERVICIO_REGISTRADA_N" Method="ADMSPS_DETALLE_EVALUACION_SERVICIO_REGISTRADA_N">
+    <Parameter Name="idEvaluacion" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLE_EVALUACION_SERVICIO_REGISTRADA_NResult">
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_DETALLE_EVALUACION_SERVICIO_REGISTRADA_S" Method="ADMSPS_DETALLE_EVALUACION_SERVICIO_REGISTRADA_S">
+    <Parameter Name="idEvaluacion" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLE_EVALUACION_SERVICIO_REGISTRADA_SResult">
+      <Column Name="P1" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P2" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P3" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P4" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P5" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P6" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Comentarios" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_EVALUACIONES_PENDIENTES_SUPERVISOR_CALL" Method="ADMSPS_EVALUACIONES_PENDIENTES_SUPERVISOR_CALL">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_EVALUACIONES_PENDIENTES_SUPERVISOR_CALLResult">
+      <Column Name="idCallCenter" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="idFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_EVALUACIONES_SERVICIO_REGISTRADAS" Method="ADMSPS_EVALUACIONES_SERVICIO_REGISTRADAS">
+    <Parameter Name="idCallCenter" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_EVALUACIONES_SERVICIO_REGISTRADASResult">
+      <Column Name="idEvaluacionServicio" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ClienteContactado" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_LISTA_EVENTOS" Method="ADMSPS_LISTA_EVENTOS">
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdSolicituTipo" Parameter="idSolicituTipo" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_LISTA_EVENTOSResult">
+      <Column Name="IdEvento" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Evento" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SOLSPI_REGISTRO_EVENTO" Method="SOLSPI_REGISTRO_EVENTO">
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdSolicitudTipo" Parameter="idSolicitudTipo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Evento" Parameter="evento" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPI_REGISTRO_TAREA" Method="SOLSPI_REGISTRO_TAREA">
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdEvento" Parameter="idEvento" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Tarea" Parameter="tarea" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ADMSPS_EXISTE_TAREA" Method="ADMSPS_EXISTE_TAREA">
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdEvento" Parameter="idEvento" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Tarea" Parameter="tarea" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="ADMSPS_EXISTE_TAREAResult">
+      <Column Name="IdTarea" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_LISTA_COORDINADORES" Method="ADMSPS_LISTA_COORDINADORES">
+    <ElementType Name="ADMSPS_LISTA_COORDINADORESResult">
+      <Column Name="IdUsuario" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuarioTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdMateria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Materia" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_LISTA_COORDINADORES_NO_ASIGNADOS" Method="ADMSPS_LISTA_COORDINADORES_NO_ASIGNADOS">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_LISTA_COORDINADORES_NO_ASIGNADOSResult">
+      <Column Name="IdUsuario" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuarioTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdMateria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Materia" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Coordinador" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_DETALLE_EVALUACION_SERVICIO" Method="ADMSPS_DETALLE_EVALUACION_SERVICIO">
+    <Parameter Name="idCallCenter" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLE_EVALUACION_SERVICIOResult">
+      <Column Name="NumCliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="RFC" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroLocal" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FechaSolicitud" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaResolucionRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_EXPORTAR_DETALLES_EVALUACIONES" Method="ADMSPS_EXPORTAR_DETALLES_EVALUACIONES">
+    <Parameter Name="validacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Desde" Parameter="desde" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Hasta" Parameter="hasta" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="ADMSPS_EXPORTAR_DETALLES_EVALUACIONESResult">
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEvalua" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ClienteContactado" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="P1" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P2" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P3" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P4" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P5" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P6" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Comentarios" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FechaEvaluacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_EVALUACIONES_REALIZADAS_SUPERVISOR_CALL_FILTROS" Method="ADMSPS_EVALUACIONES_REALIZADAS_SUPERVISOR_CALL_FILTROS">
+    <Parameter Name="Fdesde" Parameter="fdesde" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Fhasta" Parameter="fhasta" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="ADMSPS_EVALUACIONES_REALIZADAS_SUPERVISOR_CALL_FILTROSResult">
+      <Column Name="idCallCenter" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="idFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEvalua" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_EVALUACIONES_REALIZADAS" Method="ADMSPS_EVALUACIONES_REALIZADAS">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_EVALUACIONES_REALIZADASResult">
+      <Column Name="idCallCenter" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="idFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEvalua" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_EVALUACIONES_REALIZADAS_SUPERVISOR_CALL" Method="ADMSPS_EVALUACIONES_REALIZADAS_SUPERVISOR_CALL">
+    <ElementType Name="ADMSPS_EVALUACIONES_REALIZADAS_SUPERVISOR_CALLResult">
+      <Column Name="idCallCenter" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="idFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEvalua" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="cc.ADMSPS_EVALUACIONES_PENDIENTES" Method="ADMSPS_EVALUACIONES_PENDIENTES">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_EVALUACIONES_PENDIENTESResult">
+      <Column Name="idCallCenter" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="idFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_CLIENTE_INFO" Method="ADMSPS_CLIENTE_INFO">
+    <Parameter Name="Cliente" Parameter="cliente" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="tipoBusqueda" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ADMSPS_CLIENTE_INFOResult">
+      <Column Name="IdCliente" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdServicioTipo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdTipoPersona" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="NoCliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="RFC" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCliente" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="ServicioTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_BUCAR_SOLICITUDES_PENDIENTES_OFICILIA" Method="ADMSPS_BUCAR_SOLICITUDES_PENDIENTES_OFICILIA">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Parametro" Parameter="parametro" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="ADMSPS_BUCAR_SOLICITUDES_PENDIENTES_OFICILIAResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitante" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_DETALLE_SOLICITUD_INFORMACION" Method="ADMSPS_DETALLE_SOLICITUD_INFORMACION">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLE_SOLICITUD_INFORMACIONResult">
+      <Column Name="IdSolicitudInformacion" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NomCliente" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="RFC" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="CorreoElectronico" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="ServicioTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitante" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitud" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_INFORMACION_PROPUESTA" Method="ADMSPS_INFORMACION_PROPUESTA">
+    <Parameter Name="IdPropuesta" Parameter="idPropuesta" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_INFORMACION_PROPUESTAResult">
+      <Column Name="Propuesta" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DescripcionRechazo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_FOLIO_EXISTENTE" Method="ADMSPS_FOLIO_EXISTENTE">
+    <Parameter Name="IdCaso" Parameter="idCaso" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_FOLIO_EXISTENTEResult">
+      <Column Name="Validacion" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_FOLIO_EXISTENTE_MPYCC" Method="ADMSPS_FOLIO_EXISTENTE_MPYCC">
+    <Parameter Name="IdCaso" Parameter="idCaso" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_FOLIO_EXISTENTE_MPYCCResult">
+      <Column Name="Validacion" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_DOCUMENTOS_SOLICITADOS" Method="ADMSPS_DOCUMENTOS_SOLICITADOS">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DOCUMENTOS_SOLICITADOSResult">
+      <Column Name="IdSolicitudDocumento" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Requisicion" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoRequisicion" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Recibido" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_EVENTOS_SOLICITUD" Method="ADMSPS_EVENTOS_SOLICITUD">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_EVENTOS_SOLICITUDResult">
+      <Column Name="IdSolicitudEvento" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpOrigen" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="NumExpediente" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="Juzgado" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Contraparte" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TipoJuicio" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Evento" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Tarea" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TerminoInterno" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TerminoLegal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Propuesta" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RutaArchivo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_EXISTE_EVENTO" Method="ADMSPS_EXISTE_EVENTO">
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdSolicitudTipo" Parameter="idSolicitudTipo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Evento" Parameter="evento" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="ADMSPS_EXISTE_EVENTOResult">
+      <Column Name="IdEvento" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_DOCUMENTO_REGISTRADO" Method="ADMSPS_DOCUMENTO_REGISTRADO">
+    <Parameter Name="IdDocumento" Parameter="idDocumento" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DOCUMENTO_REGISTRADOResult">
+      <Column Name="Requisicion" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoRequisicion" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_TERMINADAS_SUPERVISOR_CONTABILIDAD" Method="ADMSPS_SOLICITUDES_TERMINADAS_SUPERVISOR_CONTABILIDAD">
+    <Parameter Name="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_TERMINADAS_SUPERVISOR_CONTABILIDADResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Contador" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaResolucionRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_TERMINADAS_OFICILIA" Method="ADMSPS_SOLICITUDES_TERMINADAS_OFICILIA">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_TERMINADAS_OFICILIAResult">
+      <Column Name="IdOficialiaPartes" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaRecepción" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_TERMINADAS_GERENTE_FILTROS" Method="ADMSPS_SOLICITUDES_TERMINADAS_GERENTE_FILTROS">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Fdesde" Parameter="fdesde" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Fhasta" Parameter="fhasta" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="ADMSPS_SOLICITUDES_TERMINADAS_GERENTE_FILTROSResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaResolucionRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_TERMINADAS_GERENTE" Method="ADMSPS_SOLICITUDES_TERMINADAS_GERENTE">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_TERMINADAS_GERENTEResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaResolucionRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_TERMINADAS_DIRECTIVOS" Method="ADMSPS_SOLICITUDES_TERMINADAS_DIRECTIVOS">
+    <ElementType Name="ADMSPS_SOLICITUDES_TERMINADAS_DIRECTIVOSResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaResolucionRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_TERMINADAS_COORDINADOR" Method="ADMSPS_SOLICITUDES_TERMINADAS_COORDINADOR">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_TERMINADAS_COORDINADORResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaResolucionRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_TERMINADAS_CONTADOR" Method="ADMSPS_SOLICITUDES_TERMINADAS_CONTADOR">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_TERMINADAS_CONTADORResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Contador" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaResolucionRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_TERMINADAS" Method="ADMSPS_SOLICITUDES_TERMINADAS">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_TERMINADASResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaResolucionRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_REALIZADAS" Method="ADMSPS_SOLICITUDES_REALIZADAS">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_REALIZADASResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaResolucionRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_PENDIENTES_OFICILIA" Method="ADMSPS_SOLICITUDES_PENDIENTES_OFICILIA">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_PENDIENTES_OFICILIAResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitante" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_PENDIENTES" Method="ADMSPS_SOLICITUDES_PENDIENTES">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_PENDIENTESResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitante" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_INFORMACION_REALIZADAS" Method="ADMSPS_SOLICITUDES_INFORMACION_REALIZADAS">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_INFORMACION_REALIZADASResult">
+      <Column Name="IdSolicitudInformacion" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRespuesta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_INFORMACION_PENDIENTES" Method="ADMSPS_SOLICITUDES_INFORMACION_PENDIENTES">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_INFORMACION_PENDIENTESResult">
+      <Column Name="IdSolicitudInformacion" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitante" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_EN_PROCESO_GERENTE" Method="ADMSPS_SOLICITUDES_EN_PROCESO_GERENTE">
+    <ElementType Name="ADMSPS_SOLICITUDES_EN_PROCESO_GERENTEResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_SOLICITUDES_EN_PROCESO_COORDINADOR" Method="ADMSPS_SOLICITUDES_EN_PROCESO_COORDINADOR">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_SOLICITUDES_EN_PROCESO_COORDINADORResult">
+      <Column Name="IdSolicitud" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdFase" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fase" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semaforo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SOLSPU_REGISTRAR_RESOLUCION_CONTADOR" Method="SOLSPU_REGISTRAR_RESOLUCION_CONTADOR">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Resolucion" Parameter="resolucion" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_REGISTRAR_DICTAMEN" Method="SOLSPU_REGISTRAR_DICTAMEN">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Dictamen" Parameter="dictamen" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ADMSPS_LISTA_TIPO_SERVICIOS" Method="ADMSPS_LISTA_TIPO_SERVICIOS">
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdSolicitudTipo" Parameter="idSolicitudTipo" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_LISTA_TIPO_SERVICIOSResult">
+      <Column Name="idTipoServicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tipificacion" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SOLSPI_REGISTRO_SERVICIO" Method="SOLSPI_REGISTRO_SERVICIO">
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdSolicitudTipo" Parameter="idSolicitudTipo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tipificacion" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ADMSPS_EXISTE_SERVICIO" Method="ADMSPS_EXISTE_SERVICIO">
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdSolicitudTipo" Parameter="idSolicitudTipo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Tipificacion" Parameter="tipificacion" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="ADMSPS_EXISTE_SERVICIOResult">
+      <Column Name="idTipoServicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_DETALLE_SOLICITUD_F2" Method="ADMSPS_DETALLE_SOLICITUD_F2">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLE_SOLICITUD_F2Result">
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NomCliente" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="RFC" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="CorreoElectronico" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="ServicioTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioRegistra" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Coordinador" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="IdSolicitudTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitud" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UrlCitas" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IdContadorAsignado" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tipificacion" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_DETALLE_SOLICITUD_RESOLUCION" Method="ADMSPS_DETALLE_SOLICITUD_RESOLUCION">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLE_SOLICITUD_RESOLUCIONResult">
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NomCliente" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="RFC" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="ServicioTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioRegistra" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Coordinador" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Gerente" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="IdSolicitudTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitud" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DictamenFinal" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UrlCitas" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UrlArchivoResolucion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="tipificacion" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_DETALLE_SOLICITUD_F1" Method="ADMSPS_DETALLE_SOLICITUD_F1">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLE_SOLICITUD_F1Result">
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NomCliente" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="RFC" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="ServicioTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioRegistra" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitud" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UrlLlamadas" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IdContadorAsignado" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ADMSPS_CONTADOR_ASIGNADO_CLIENTE" Method="ADMSPS_CONTADOR_ASIGNADO_CLIENTE">
+    <Parameter Name="IdContador" Parameter="idContador" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_CONTADOR_ASIGNADO_CLIENTEResult">
+      <Column Name="IdUsuario" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuarioTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdMateria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Contador" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SOLSPI_ALTA_SOLICITUD" Method="SOLSPI_ALTA_SOLICITUD">
+    <Parameter Name="IdUsuarioActual" Parameter="idUsuarioActual" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdCliente" Parameter="idCliente" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdUsuarioCoordinador" Parameter="idUsuarioCoordinador" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdUsuarioRegistra" Parameter="idUsuarioRegistra" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdMateria" Parameter="idMateria" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdCaso" Parameter="idCaso" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Solicitud" Parameter="solicitud" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_ASIGNA_EVENTO" Method="SOLSPU_ASIGNA_EVENTO">
+    <Parameter Name="Decision" Parameter="decision" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdUsuarioAsigna" Parameter="idUsuarioAsigna" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdUsuarioAsignado" Parameter="idUsuarioAsignado" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdTipoEvento" Parameter="idTipoEvento" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdTipificacion" Parameter="idTipificacion" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Observaciones" Parameter="observaciones" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Resolucion" Parameter="resolucion" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ADMSPS_CONTADOR_CLIENTE" Method="ADMSPS_CONTADOR_CLIENTE">
+    <Parameter Name="IdContador" Parameter="idContador" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_CONTADOR_CLIENTEResult">
+      <Column Name="IdUsuario" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Contador" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SOLSPI_ALTA_EVENTO" Method="SOLSPI_ALTA_EVENTO">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdUsuarioConsultor" Parameter="idUsuarioConsultor" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdEvento" Parameter="idEvento" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdTarea" Parameter="idTarea" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ExpOrigen" Parameter="expOrigen" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="NumExpediente" Parameter="numExpediente" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Juzgado" Parameter="juzgado" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Contraparte" Parameter="contraparte" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="TipoJuicio" Parameter="tipoJuicio" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Propuesta" Parameter="propuesta" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TerminoInterno" Parameter="terminoInterno" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TerminoLegal" Parameter="terminoLegal" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="EnvioOficialia" Parameter="envioOficialia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DescripActo" Parameter="descripActo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ADMSPS_DETALLES_EVENTO" Method="ADMSPS_DETALLES_EVENTO">
+    <Parameter Name="IdEvento" Parameter="idEvento" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLES_EVENTOResult">
+      <Column Name="ExpOrigen" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="NumExpediente" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="Juzgado" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Contraparte" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TipoJuicio" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Evento" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Tarea" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TerminoInterno" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TerminoLegal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Propuesta" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DescripcionActo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SOLSPU_EVENTO_REGISTRADO" Method="SOLSPU_EVENTO_REGISTRADO">
+    <Parameter Name="IdEvento" Parameter="idEvento" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ExpOrigen" Parameter="expOrigen" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="NumExpediente" Parameter="numExpediente" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Juzgado" Parameter="juzgado" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Contraparte" Parameter="contraparte" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="TipoJuicio" Parameter="tipoJuicio" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Propuesta" Parameter="propuesta" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="oficilia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DescripActo" Parameter="descripActo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SOLSPU_REGISTRAR_RESOLUCION" Method="SOLSPU_REGISTRAR_RESOLUCION">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Resolucion" Parameter="resolucion" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ResServicio" Parameter="resServicio" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ADMSPS_DETALLES_SOLICITUD" Method="ADMSPS_DETALLES_SOLICITUD">
+    <Parameter Name="IdSolicitud" Parameter="idSolicitud" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="ADMSPS_DETALLES_SOLICITUDResult">
+      <Column Name="IdCaso" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NomCliente" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="RFC" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="ServicioTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioRegistra" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Coordinador" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Consultor" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="Gerente" Type="System.String" DbType="NVarChar(137) NOT NULL" CanBeNull="false" />
+      <Column Name="IdSolicitudTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SolicitudTipo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Solicitud" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DictamenFinal" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UrlCitas" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UrlArchivoResolucion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ResolucionRespuesta" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tipificacion" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Resolucion" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

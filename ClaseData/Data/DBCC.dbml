@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LXCC" Class="DBCCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.169.143.34;Initial Catalog=MPYCC;Persist Security Info=True;User ID=MPY1115" SettingsObjectName="ClaseData.Properties.Settings" SettingsPropertyName="LXCCConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.LXCCSPS_VALIDAR_USUARIO" Method="LXCCSPS_VALIDAR_USUARIO">
+    <Parameter Name="User" Parameter="user" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(45)" />
+    <ElementType Name="LXCCSPS_VALIDAR_USUARIOResult">
+      <Column Name="IdUsuario" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuarioTipo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="APaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="AMaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

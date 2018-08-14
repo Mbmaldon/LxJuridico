@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF13308E-752B-4032-B8A2-791B11A7FDDF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlActividadesJuridico</RootNamespace>
+    <AssemblyName>ControlActividadesJuridico</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\192.168.1.118\Desarrollo TIC\DESARROLLOS\Proyecto Lexa Medic\JURIDICO\Instalador\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5C4D51680CB80048D1FC7B00647598FC0B758646</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ControlActividadesJuridico_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="MetroFramework, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\V.1.4.0\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\V.1.4.0\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\V.1.4.0\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asistencia\FAAprobar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencia\FAAprobar.Designer.cs">
+      <DependentUpon>FAAprobar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencia\FARealizarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencia\FARealizarAsistencia.Designer.cs">
+      <DependentUpon>FARealizarAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencia\FARespuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencia\FARespuesta.Designer.cs">
+      <DependentUpon>FARespuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencia\RegistroAsistencias\FARAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencia\RegistroAsistencias\FARAsistencias.Designer.cs">
+      <DependentUpon>FARAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\FCRegistrarEvaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallCenter\FCRegistrarEvaluacion.Designer.cs">
+      <DependentUpon>FCRegistrarEvaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\FDetalleEvaluacionN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallCenter\FDetalleEvaluacionN.Designer.cs">
+      <DependentUpon>FDetalleEvaluacionN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallCenter\FDetalleEvaluacionS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallCenter\FDetalleEvaluacionS.Designer.cs">
+      <DependentUpon>FDetalleEvaluacionS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FCAprobar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FCAprobar.Designer.cs">
+      <DependentUpon>FCAprobar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FCGenerarPropuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FCGenerarPropuesta.Designer.cs">
+      <DependentUpon>FCGenerarPropuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FCRespuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FCRespuesta.Designer.cs">
+      <DependentUpon>FCRespuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\RegistroConsultas\FCRConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\RegistroConsultas\FCRConsultas.Designer.cs">
+      <DependentUpon>FCRConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAltaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAltaUsuario.Designer.cs">
+      <DependentUpon>FAltaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAsignarConsultor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAsignarConsultor.Designer.cs">
+      <DependentUpon>FAsignarConsultor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBandeja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBandeja.Designer.cs">
+      <DependentUpon>FBandeja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDEvaluacionServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDEvaluacionServicio.Designer.cs">
+      <DependentUpon>FDEvaluacionServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEvaluarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEvaluarServicio.Designer.cs">
+      <DependentUpon>FEvaluarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSeguimientoFolios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSeguimientoFolios.Designer.cs">
+      <DependentUpon>FSeguimientoFolios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSolicitudJuridica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSolicitudJuridica.Designer.cs">
+      <DependentUpon>FSolicitudJuridica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\AddFolders\FAddFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\AddFolders\FAddFolder.Designer.cs">
+      <DependentUpon>FAddFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\DragHelper.cs" />
+    <Compile Include="Representacion\FCDetalleSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FCDetalleSolicitud.Designer.cs">
+      <DependentUpon>FCDetalleSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FCResolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FCResolucion.Designer.cs">
+      <DependentUpon>FCResolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FDetalleSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FDetalleSolicitud.Designer.cs">
+      <DependentUpon>FDetalleSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FRAprobar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FRAprobar.Designer.cs">
+      <DependentUpon>FRAprobar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FRCAprobar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FRCAprobar.Designer.cs">
+      <DependentUpon>FRCAprobar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FRCGenerarRespuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FRCGenerarRespuesta.Designer.cs">
+      <DependentUpon>FRCGenerarRespuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FRDetalleOficilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FRDetalleOficilia.Designer.cs">
+      <DependentUpon>FRDetalleOficilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FRDetalleOficiliaTerminada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FRDetalleOficiliaTerminada.Designer.cs">
+      <DependentUpon>FRDetalleOficiliaTerminada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FRDetalleServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FRDetalleServicio.Designer.cs">
+      <DependentUpon>FRDetalleServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FRDetalleSInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FRDetalleSInformacion.Designer.cs">
+      <DependentUpon>FRDetalleSInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FRDictamenFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FRDictamenFinal.Designer.cs">
+      <DependentUpon>FRDictamenFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\FRResolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\FRResolucion.Designer.cs">
+      <DependentUpon>FRResolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRCEditPropuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRCEditPropuesta.Designer.cs">
+      <DependentUpon>FRCEditPropuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRCRegistrarPropuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRCRegistrarPropuesta.Designer.cs">
+      <DependentUpon>FRCRegistrarPropuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRDetallesOficialiaT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRDetallesOficialiaT.Designer.cs">
+      <DependentUpon>FRDetallesOficialiaT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRAprobarPropuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRAprobarPropuesta.Designer.cs">
+      <DependentUpon>FRRAprobarPropuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRDetallesEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRDetallesEvento.Designer.cs">
+      <DependentUpon>FRRDetallesEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRDocumento.Designer.cs">
+      <DependentUpon>FRRDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRREditEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRREditEvento.Designer.cs">
+      <DependentUpon>FRREditEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRREditPropuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRREditPropuesta.Designer.cs">
+      <DependentUpon>FRREditPropuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRegistroDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRegistroDocumento.Designer.cs">
+      <DependentUpon>FRRegistroDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRREventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRREventos.Designer.cs">
+      <DependentUpon>FRREventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRRecepcionOficialia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRRecepcionOficialia.Designer.cs">
+      <DependentUpon>FRRRecepcionOficialia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRRegistrarPropuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRRegistrarPropuesta.Designer.cs">
+      <DependentUpon>FRRRegistrarPropuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRRegistroDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRRegistroDocumento.Designer.cs">
+      <DependentUpon>FRRRegistroDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRRSolicitudInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRRSolicitudInformacion.Designer.cs">
+      <DependentUpon>FRRRSolicitudInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRSolicitarInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representacion\RegistroAvances\FRRSolicitarInformacion.Designer.cs">
+      <DependentUpon>FRRSolicitarInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rutaAdjuntarArchivo.cs" />
+    <EmbeddedResource Include="Asistencia\FAAprobar.resx">
+      <DependentUpon>FAAprobar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencia\FARealizarAsistencia.resx">
+      <DependentUpon>FARealizarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencia\FARespuesta.resx">
+      <DependentUpon>FARespuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencia\RegistroAsistencias\FARAsistencias.resx">
+      <DependentUpon>FARAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallCenter\FCRegistrarEvaluacion.resx">
+      <DependentUpon>FCRegistrarEvaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallCenter\FDetalleEvaluacionN.resx">
+      <DependentUpon>FDetalleEvaluacionN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallCenter\FDetalleEvaluacionS.resx">
+      <DependentUpon>FDetalleEvaluacionS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FCAprobar.resx">
+      <DependentUpon>FCAprobar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FCGenerarPropuesta.resx">
+      <DependentUpon>FCGenerarPropuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FCRespuesta.resx">
+      <DependentUpon>FCRespuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\RegistroConsultas\FCRConsultas.resx">
+      <DependentUpon>FCRConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAltaUsuario.resx">
+      <DependentUpon>FAltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAsignarConsultor.resx">
+      <DependentUpon>FAsignarConsultor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBandeja.resx">
+      <DependentUpon>FBandeja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDEvaluacionServicio.resx">
+      <DependentUpon>FDEvaluacionServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEvaluarServicio.resx">
+      <DependentUpon>FEvaluarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSeguimientoFolios.resx">
+      <DependentUpon>FSeguimientoFolios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSolicitudJuridica.resx">
+      <DependentUpon>FSolicitudJuridica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\AddFolders\FAddFolder.resx">
+      <DependentUpon>FAddFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FCDetalleSolicitud.resx">
+      <DependentUpon>FCDetalleSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FCResolucion.resx">
+      <DependentUpon>FCResolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FDetalleSolicitud.resx">
+      <DependentUpon>FDetalleSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FRAprobar.resx">
+      <DependentUpon>FRAprobar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FRCAprobar.resx">
+      <DependentUpon>FRCAprobar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FRCGenerarRespuesta.resx">
+      <DependentUpon>FRCGenerarRespuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FRDetalleOficilia.resx">
+      <DependentUpon>FRDetalleOficilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FRDetalleOficiliaTerminada.resx">
+      <DependentUpon>FRDetalleOficiliaTerminada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FRDetalleServicio.resx">
+      <DependentUpon>FRDetalleServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FRDetalleSInformacion.resx">
+      <DependentUpon>FRDetalleSInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FRDictamenFinal.resx">
+      <DependentUpon>FRDictamenFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\FRResolucion.resx">
+      <DependentUpon>FRResolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRCEditPropuesta.resx">
+      <DependentUpon>FRCEditPropuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRCRegistrarPropuesta.resx">
+      <DependentUpon>FRCRegistrarPropuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRDetallesOficialiaT.resx">
+      <DependentUpon>FRDetallesOficialiaT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRRAprobarPropuesta.resx">
+      <DependentUpon>FRRAprobarPropuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRRDetallesEvento.resx">
+      <DependentUpon>FRRDetallesEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRRDocumento.resx">
+      <DependentUpon>FRRDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRREditEvento.resx">
+      <DependentUpon>FRREditEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRREditPropuesta.resx">
+      <DependentUpon>FRREditPropuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRRegistroDocumento.resx">
+      <DependentUpon>FRRegistroDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRREventos.resx">
+      <DependentUpon>FRREventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRRRecepcionOficialia.resx">
+      <DependentUpon>FRRRecepcionOficialia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRRRegistrarPropuesta.resx">
+      <DependentUpon>FRRRegistrarPropuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRRRegistroDocumento.resx">
+      <DependentUpon>FRRRegistroDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRRRSolicitudInformacion.resx">
+      <DependentUpon>FRRRSolicitudInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representacion\RegistroAvances\FRRSolicitarInformacion.resx">
+      <DependentUpon>FRRSolicitarInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ControlActividadesJuridico_ClaveTemporal.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClaseData\ClaseData.csproj">
+      <Project>{748937EE-77C9-482E-A6EC-8D68EE179496}</Project>
+      <Name>ClaseData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaCC\LogicaCC.csproj">
+      <Project>{a421d64b-4e8a-4859-87dd-3db9cf52c49c}</Project>
+      <Name>LogicaCC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MaterialSkin\MaterialSkin.csproj">
+      <Project>{8eb7611b-68cd-4b8b-987a-11717e2b250c}</Project>
+      <Name>MaterialSkin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_10px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microphone_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoMiPyme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit - 02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register by Device.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form delete-01-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Door closed-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File Add-WF3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File Ok-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_file_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form delete-01-WF-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\details_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_details_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\content_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_row_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_file_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_file_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_sign_filled_10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_sign_filled_10pxb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel-Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_folder_14px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_folder_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_folder_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_file_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGD-2-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGD-1-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoMedic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_details_gray_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attach_20px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
