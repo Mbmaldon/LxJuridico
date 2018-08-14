@@ -1,0 +1,1314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F63CB33D-E44A-4143-B105-E71944CFA42D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LxCallcenter</RootNamespace>
+    <AssemblyName>MiPyME</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\192.168.1.118\Desarrollo TIC\DESARROLLOS\MPY\SAS\Setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>MiPyME SAS</ProductName>
+    <PublisherName>MiPyME</PublisherName>
+    <SuiteName>MiPyME</SuiteName>
+    <ApplicationRevision>64</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F5E289D41920DD9661A04FA738B78029C452B8D1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LxCallcenter_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LxCallcenter.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Win, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\EXTRAS\iTextSharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\MetroFramework\V.1.4.0\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\MetroFramework\V.1.4.0\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\MetroFramework\V.1.4.0\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="OzekiSDK, Version=1.3.6.0, Culture=neutral, PublicKeyToken=4812fb35129b8487, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Ozeki SDK\Usado\OzekiSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AltaDeclaracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaDeclaracion.Designer.cs">
+      <DependentUpon>AltaDeclaracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaUsuario.Designer.cs">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CCPrincipal.Designer.cs">
+      <DependentUpon>CCPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteSMS.Designer.cs">
+      <DependentUpon>ClienteSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesSMSs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesSMSs.Designer.cs">
+      <DependentUpon>ClientesSMSs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConcentradoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConcentradoUsuarios.Designer.cs">
+      <DependentUpon>ConcentradoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LollipopButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopButtonV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopFileInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopFlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopFolderInPut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopSmallCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DragHelper.cs" />
+    <Compile Include="EnviarMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnviarMensajes.Designer.cs">
+      <DependentUpon>EnviarMensajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioSms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnvioSms.Designer.cs">
+      <DependentUpon>EnvioSms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCancelarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCancelarServicio.Designer.cs">
+      <DependentUpon>FCancelarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlatMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlatMessageBox.Designer.cs">
+      <DependentUpon>FlatMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrincipal.Designer.cs">
+      <DependentUpon>FPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCancelProsp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCancelProsp.Designer.cs">
+      <DependentUpon>frmCancelProsp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCitasAgendadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCitasAgendadas.Designer.cs">
+      <DependentUpon>frmCitasAgendadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCitasAgendasHoy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCitasAgendasHoy.Designer.cs">
+      <DependentUpon>frmCitasAgendasHoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComentarioCerrarFolio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComentarioCerrarFolio.Designer.cs">
+      <DependentUpon>frmComentarioCerrarFolio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDbSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDbSettings.Designer.cs">
+      <DependentUpon>frmDbSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDescargarArchivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDescargarArchivos.Designer.cs">
+      <DependentUpon>frmDescargarArchivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDirectorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDirectorio.Designer.cs">
+      <DependentUpon>frmDirectorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistorialLlamadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistorialLlamadas.Designer.cs">
+      <DependentUpon>frmHistorialLlamadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaCarpeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaCarpeta.Designer.cs">
+      <DependentUpon>frmNuevaCarpeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProspectoHistorialDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProspectoHistorialDetalle.Designer.cs">
+      <DependentUpon>frmProspectoHistorialDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProspectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProspectos.Designer.cs">
+      <DependentUpon>frmProspectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProspectosAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProspectosAlta.Designer.cs">
+      <DependentUpon>frmProspectosAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProspectosAltaMasiva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProspectosAltaMasiva.Designer.cs">
+      <DependentUpon>frmProspectosAltaMasiva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProspectosInactivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProspectosInactivos.Designer.cs">
+      <DependentUpon>frmProspectosInactivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubirArchivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubirArchivos.Designer.cs">
+      <DependentUpon>frmSubirArchivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelefono.Designer.cs">
+      <DependentUpon>frmTelefono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelefonoConfigurar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelefonoConfigurar.Designer.cs">
+      <DependentUpon>frmTelefonoConfigurar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSeguimientoFolios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSeguimientoFolios.Designer.cs">
+      <DependentUpon>FSeguimientoFolios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmAsignarObligaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmAsignarObligaciones.Designer.cs">
+      <DependentUpon>frmAsignarObligaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmCalculadoraRecargosActualizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmCalculadoraRecargosActualizaciones.Designer.cs">
+      <DependentUpon>frmCalculadoraRecargosActualizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmClients.Designer.cs">
+      <DependentUpon>frmClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmDeclaracionComplementaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmDeclaracionComplementaria.Designer.cs">
+      <DependentUpon>frmDeclaracionComplementaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmDeclaracionModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmDeclaracionModificar.Designer.cs">
+      <DependentUpon>frmDeclaracionModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmEditarDeclaracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmEditarDeclaracion.Designer.cs">
+      <DependentUpon>frmEditarDeclaracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmExpedienteLineaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmExpedienteLineaClientes.Designer.cs">
+      <DependentUpon>frmExpedienteLineaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmHistorialDeclaraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmHistorialDeclaraciones.Designer.cs">
+      <DependentUpon>frmHistorialDeclaraciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmInicioContadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmInicioContadores.Designer.cs">
+      <DependentUpon>frmInicioContadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmInicioObligaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmInicioObligaciones.Designer.cs">
+      <DependentUpon>frmInicioObligaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesCliente.Designer.cs">
+      <DependentUpon>frmObligacionesCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesCumplidasCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesCumplidasCliente.Designer.cs">
+      <DependentUpon>frmObligacionesCumplidasCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesEditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesEditarCliente.Designer.cs">
+      <DependentUpon>frmObligacionesEditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesPFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesPFisica.Designer.cs">
+      <DependentUpon>frmObligacionesPFisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesPMoral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesPMoral.Designer.cs">
+      <DependentUpon>frmObligacionesPMoral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesRecordatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesRecordatorios.Designer.cs">
+      <DependentUpon>frmObligacionesRecordatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesUnicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmObligacionesUnicas.Designer.cs">
+      <DependentUpon>frmObligacionesUnicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmPendientes.Designer.cs">
+      <DependentUpon>frmPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmRecordatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmRecordatorios.Designer.cs">
+      <DependentUpon>frmRecordatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmReminders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmReminders.Designer.cs">
+      <DependentUpon>frmReminders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmTipoPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOConta\frmTipoPersona.Designer.cs">
+      <DependentUpon>frmTipoPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\Diagnostico.cs" />
+    <Compile Include="LexaSIOOperacionesDispersiones\frmAlimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmAlimentos.Designer.cs">
+      <DependentUpon>frmAlimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmAltaVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmAltaVendedor.Designer.cs">
+      <DependentUpon>frmAltaVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmAsignarFacCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmAsignarFacCon.Designer.cs">
+      <DependentUpon>frmAsignarFacCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmBonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmBonos.Designer.cs">
+      <DependentUpon>frmBonos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmCatalogoSci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmCatalogoSci.Designer.cs">
+      <DependentUpon>frmCatalogoSci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmCatalogoVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmCatalogoVendedores.Designer.cs">
+      <DependentUpon>frmCatalogoVendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmClientesInactivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmClientesInactivos.Designer.cs">
+      <DependentUpon>frmClientesInactivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmComision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmComision.Designer.cs">
+      <DependentUpon>frmComision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmComisionAsigIdBancBat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmComisionAsigIdBancBat.Designer.cs">
+      <DependentUpon>frmComisionAsigIdBancBat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmComisionAsigIdBancMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmComisionAsigIdBancMan.Designer.cs">
+      <DependentUpon>frmComisionAsigIdBancMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmComisiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmComisiones.Designer.cs">
+      <DependentUpon>frmComisiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmComisionesPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmComisionesPago.Designer.cs">
+      <DependentUpon>frmComisionesPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmConcentradoAlimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmConcentradoAlimentos.Designer.cs">
+      <DependentUpon>frmConcentradoAlimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmConciliacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmConciliacion.Designer.cs">
+      <DependentUpon>frmConciliacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmControlOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmControlOperaciones.Designer.cs">
+      <DependentUpon>frmControlOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmDevolucionAsigIdBancMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmDevolucionAsigIdBancMan.Designer.cs">
+      <DependentUpon>frmDevolucionAsigIdBancMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmGenerarLayoutComisiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmGenerarLayoutComisiones.Designer.cs">
+      <DependentUpon>frmGenerarLayoutComisiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmGenerarLayoutDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmGenerarLayoutDevoluciones.Designer.cs">
+      <DependentUpon>frmGenerarLayoutDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmOperacionesAgentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmOperacionesAgentes.Designer.cs">
+      <DependentUpon>frmOperacionesAgentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmOperacionesCargaBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmOperacionesCargaBatch.Designer.cs">
+      <DependentUpon>frmOperacionesCargaBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmOperacionesDispersionesInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmOperacionesDispersionesInicio.Designer.cs">
+      <DependentUpon>frmOperacionesDispersionesInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmPremios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmPremios.Designer.cs">
+      <DependentUpon>frmPremios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmReportesOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LexaSIOOperacionesDispersiones\frmReportesOperaciones.Designer.cs">
+      <DependentUpon>frmReportesOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkConnection.cs" />
+    <Compile Include="OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarLlamada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarLlamada.Designer.cs">
+      <DependentUpon>RegistrarLlamada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarLlamadaModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarLlamadaModal.Designer.cs">
+      <DependentUpon>RegistrarLlamadaModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerFile.cs" />
+    <Compile Include="UIManagers\DrawHelper.cs" />
+    <Compile Include="UIManagers\FontManager.cs" />
+    <Compile Include="VLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="AltaDeclaracion.resx">
+      <DependentUpon>AltaDeclaracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaUsuario.resx">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CCPrincipal.resx">
+      <DependentUpon>CCPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteSMS.resx">
+      <DependentUpon>ClienteSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesSMSs.resx">
+      <DependentUpon>ClientesSMSs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConcentradoUsuarios.resx">
+      <DependentUpon>ConcentradoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnviarMensajes.resx">
+      <DependentUpon>EnviarMensajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnvioSms.resx">
+      <DependentUpon>EnvioSms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCancelarServicio.resx">
+      <DependentUpon>FCancelarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlatMessageBox.resx">
+      <DependentUpon>FlatMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrincipal.resx">
+      <DependentUpon>FPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCancelProsp.resx">
+      <DependentUpon>frmCancelProsp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCitasAgendadas.resx">
+      <DependentUpon>frmCitasAgendadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCitasAgendasHoy.resx">
+      <DependentUpon>frmCitasAgendasHoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComentarioCerrarFolio.resx">
+      <DependentUpon>frmComentarioCerrarFolio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDbSettings.resx">
+      <DependentUpon>frmDbSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDescargarArchivos.resx">
+      <DependentUpon>frmDescargarArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDirectorio.resx">
+      <DependentUpon>frmDirectorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistorialLlamadas.resx">
+      <DependentUpon>frmHistorialLlamadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaCarpeta.resx">
+      <DependentUpon>frmNuevaCarpeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProspectoHistorialDetalle.resx">
+      <DependentUpon>frmProspectoHistorialDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProspectos.resx">
+      <DependentUpon>frmProspectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProspectosAlta.resx">
+      <DependentUpon>frmProspectosAlta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProspectosAltaMasiva.resx">
+      <DependentUpon>frmProspectosAltaMasiva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProspectosInactivos.resx">
+      <DependentUpon>frmProspectosInactivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubirArchivos.resx">
+      <DependentUpon>frmSubirArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelefono.resx">
+      <DependentUpon>frmTelefono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelefonoConfigurar.resx">
+      <DependentUpon>frmTelefonoConfigurar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSeguimientoFolios.resx">
+      <DependentUpon>FSeguimientoFolios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmAsignarObligaciones.resx">
+      <DependentUpon>frmAsignarObligaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmCalculadoraRecargosActualizaciones.resx">
+      <DependentUpon>frmCalculadoraRecargosActualizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmClients.resx">
+      <DependentUpon>frmClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmDeclaracionComplementaria.resx">
+      <DependentUpon>frmDeclaracionComplementaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmDeclaracionModificar.resx">
+      <DependentUpon>frmDeclaracionModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmEditarDeclaracion.resx">
+      <DependentUpon>frmEditarDeclaracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmExpedienteLineaClientes.resx">
+      <DependentUpon>frmExpedienteLineaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmHistorialDeclaraciones.resx">
+      <DependentUpon>frmHistorialDeclaraciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmInicioContadores.resx">
+      <DependentUpon>frmInicioContadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmInicioObligaciones.resx">
+      <DependentUpon>frmInicioObligaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmObligacionesCliente.resx">
+      <DependentUpon>frmObligacionesCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmObligacionesCumplidasCliente.resx">
+      <DependentUpon>frmObligacionesCumplidasCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmObligacionesEditarCliente.resx">
+      <DependentUpon>frmObligacionesEditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmObligacionesPFisica.resx">
+      <DependentUpon>frmObligacionesPFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmObligacionesPMoral.resx">
+      <DependentUpon>frmObligacionesPMoral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmObligacionesRecordatorios.resx">
+      <DependentUpon>frmObligacionesRecordatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmObligacionesUnicas.resx">
+      <DependentUpon>frmObligacionesUnicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmPendientes.resx">
+      <DependentUpon>frmPendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmRecordatorios.resx">
+      <DependentUpon>frmRecordatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmReminders.resx">
+      <DependentUpon>frmReminders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOConta\frmTipoPersona.resx">
+      <DependentUpon>frmTipoPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmAlimentos.resx">
+      <DependentUpon>frmAlimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmAltaVendedor.resx">
+      <DependentUpon>frmAltaVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmAsignarFacCon.resx">
+      <DependentUpon>frmAsignarFacCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmBonos.resx">
+      <DependentUpon>frmBonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmCatalogoSci.resx">
+      <DependentUpon>frmCatalogoSci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmCatalogoVendedores.resx">
+      <DependentUpon>frmCatalogoVendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmClientesInactivos.resx">
+      <DependentUpon>frmClientesInactivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmComision.resx">
+      <DependentUpon>frmComision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmComisionAsigIdBancBat.resx">
+      <DependentUpon>frmComisionAsigIdBancBat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmComisionAsigIdBancMan.resx">
+      <DependentUpon>frmComisionAsigIdBancMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmComisiones.resx">
+      <DependentUpon>frmComisiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmComisionesPago.resx">
+      <DependentUpon>frmComisionesPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmConcentradoAlimentos.resx">
+      <DependentUpon>frmConcentradoAlimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmConciliacion.resx">
+      <DependentUpon>frmConciliacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmControlOperaciones.resx">
+      <DependentUpon>frmControlOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmDevolucionAsigIdBancMan.resx">
+      <DependentUpon>frmDevolucionAsigIdBancMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmGenerarLayoutComisiones.resx">
+      <DependentUpon>frmGenerarLayoutComisiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmGenerarLayoutDevoluciones.resx">
+      <DependentUpon>frmGenerarLayoutDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmOperacionesAgentes.resx">
+      <DependentUpon>frmOperacionesAgentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmOperacionesCargaBatch.resx">
+      <DependentUpon>frmOperacionesCargaBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmOperacionesDispersionesInicio.resx">
+      <DependentUpon>frmOperacionesDispersionesInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmPremios.resx">
+      <DependentUpon>frmPremios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LexaSIOOperacionesDispersiones\frmReportesOperaciones.resx">
+      <DependentUpon>frmReportesOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarLlamada.resx">
+      <DependentUpon>RegistrarLlamada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarLlamadaModal.resx">
+      <DependentUpon>RegistrarLlamadaModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClaseData\ClaseData.csproj">
+      <Project>{748937ee-77c9-482e-a6ec-8d68ee179496}</Project>
+      <Name>ClaseData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlActividadesJuridico\ControlActividadesJuridico.csproj">
+      <Project>{ef13308e-752b-4032-b8a2-791b11a7fddf}</Project>
+      <Name>ControlActividadesJuridico</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaCC\LogicaCC.csproj">
+      <Project>{a421d64b-4e8a-4859-87dd-3db9cf52c49c}</Project>
+      <Name>LogicaCC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MaterialSkin\MaterialSkin.csproj">
+      <Project>{8EB7611B-68CD-4B8B-987A-11717E2B250C}</Project>
+      <Name>MaterialSkin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon_Hlf_icon.ico" />
+    <Content Include="Icon.ico" />
+    <Content Include="Icon128.ico" />
+    <Content Include="MiPyme-ICO-01-ConvertImage.ico" />
+    <Content Include="MiPyme_360º-Icono.ico" />
+    <None Include="Resources\skyscrapers_96px.png" />
+    <None Include="Resources\overtime_48px.png" />
+    <None Include="Resources\no_mobile_devices_48px.png" />
+    <None Include="Resources\phone_android_16px.png" />
+    <None Include="Resources\phone_android_48px.png" />
+    <None Include="Resources\recurring_appointment_20px1.png" />
+    <None Include="Resources\recurring_appointment_24px.png" />
+    <None Include="Resources\home_24px.png" />
+    <None Include="Resources\pause_52px.png" />
+    <None Include="Resources\play_52px.png" />
+    <None Include="Resources\telephone-call-icon-logo-by-Vexels.png" />
+    <None Include="Resources\todo_list_16px.png" />
+    <None Include="Resources\unfriend_male_48px.png" />
+    <None Include="Resources\plus_16px.png" />
+    <None Include="Resources\user_group_man_woman_48px.png" />
+    <None Include="Resources\phone_13px.png" />
+    <None Include="Resources\p-morales.png" />
+    <None Include="Resources\p-fisicas.png" />
+    <None Include="Resources\persona-moral.png" />
+    <None Include="Resources\persona-fisica.png" />
+    <None Include="Resources\settings_20px.png" />
+    <None Include="Resources\more_23px.png" />
+    <None Include="Resources\recurring_appointment_20px.png" />
+    <None Include="Resources\save_20px.png" />
+    <None Include="Resources\santander.jpg" />
+    <None Include="Resources\santander2.png" />
+    <None Include="Resources\santander1.png" />
+    <None Include="Resources\santander.png" />
+    <None Include="Resources\left_4_48px.png" />
+    <None Include="Resources\outline_15px.png" />
+    <None Include="Resources\hand_up_15px.png" />
+    <None Include="Resources\upload_to_cloud_15px.png" />
+    <None Include="Resources\key_2_48px.png" />
+    <None Include="Resources\key_15px.png" />
+    <None Include="Resources\picture_48px.png" />
+    <None Include="Resources\ms_word_48px.png" />
+    <None Include="Resources\pdf_2_48px.png" />
+    <None Include="Resources\loading2.gif" />
+    <None Include="Resources\giphy.gif" />
+    <None Include="Resources\refund_2_48px.png" />
+    <None Include="Resources\recurring_appointment_15px.png" />
+    <None Include="Resources\ms_excel_48px1.png" />
+    <None Include="Resources\one_finger_17px.png" />
+    <None Include="Resources\Logo.png" />
+    <None Include="Resources\Logo-SAS.png" />
+    <None Include="Resources\pdf_48px.png" />
+    <None Include="Resources\ms_word_logo_48px.png" />
+    <None Include="Resources\trophy_48px.png" />
+    <None Include="Resources\phone_calling_static_trans.png" />
+    <None Include="Resources\phone_calling_solid.gif" />
+    <None Include="Resources\incoming-call.gif" />
+    <None Include="Resources\restart_24px.png" />
+    <None Include="Resources\forward_50px.png" />
+    <None Include="Resources\upload_48px.png" />
+    <None Include="Resources\Imagen2.png" />
+    <None Include="Resources\Imagen1.png" />
+    <None Include="Resources\settings_48px.png" />
+    <None Include="Resources\portrait_mode_48px.png" />
+    <None Include="Resources\night_portrait_48px.png" />
+    <None Include="Resources\Telephone - Outgoing.png" />
+    <None Include="Resources\Telephone -03.png" />
+    <None Include="Resources\phone_50px.png" />
+    <None Include="Resources\phone_48px_White.png" />
+    <None Include="Resources\resume_button_48px.png" />
+    <None Include="Resources\pause_48px.png" />
+    <None Include="Resources\speaker_48px.png" />
+    <None Include="Resources\phone_48px1.png" />
+    <None Include="Resources\mute_48px.png" />
+    <None Include="Resources\hashtag_48px.png" />
+    <None Include="Resources\speech_bubble_48px.png" />
+    <None Include="Resources\help_96px.png" />
+    <None Include="Resources\refund_48px.png" />
+    <None Include="Resources\xls_48px.png" />
+    <None Include="Resources\receipt_48px.png" />
+    <None Include="Resources\id_verified_48px.png" />
+    <None Include="Resources\plus_48px.png" />
+    <None Include="Resources\info_25px.png" />
+    <None Include="Resources\info_96px.png" />
+    <None Include="Resources\stop_25px1.png" />
+    <None Include="Resources\play_25px1.png" />
+    <None Include="Resources\phone_16px1.png" />
+    <None Include="Resources\microphone_16px1.png" />
+    <None Include="Resources\stop_48px.png" />
+    <None Include="Resources\play_48px.png" />
+    <None Include="Resources\phone_48px.png" />
+    <None Include="Resources\microphone_48px.png" />
+    <None Include="Resources\ms_excel_21px.png" />
+    <None Include="Resources\ms_excel_48px.png" />
+    <None Include="Resources\view_details_48px.png" />
+    <None Include="Resources\sent_96px.png" />
+    <None Include="Resources\Yellow.png" />
+    <None Include="Resources\Roboto-Medium.ttf" />
+    <None Include="Resources\Roboto-Regular.ttf" />
+    <None Include="Resources\save_96px.png" />
+    <None Include="Resources\save_48px.png" />
+    <None Include="Resources\upload_96px.png" />
+    <None Include="Resources\traffic_light_96px.png" />
+    <None Include="Resources\user_menu_male_96px.png" />
+    <None Include="Resources\search_48px.png" />
+    <None Include="Resources\open_in_window_48px.png" />
+    <None Include="Resources\moved_topic_48px.png" />
+    <None Include="Resources\new_document_48px.png" />
+    <None Include="Resources\obligaciones1.png" />
+    <None Include="Resources\multiple_choice_48px.png" />
+    <None Include="Resources\obligaciones.png" />
+    <None Include="Resources\portrait_25px.png" />
+    <None Include="Resources\portrait_filled_25px.png" />
+    <None Include="Resources\ms_excel_25px3.png" />
+    <None Include="Resources\ms_excel_25px2.png" />
+    <None Include="Resources\ms_excel_25px.png" />
+    <None Include="Resources\ms_excel_filled_25px.png" />
+    <None Include="Resources\ms_excel_20px.png" />
+    <None Include="Resources\ms_excel_filled_20px.png" />
+    <None Include="Resources\refund_16px.png" />
+    <None Include="Resources\refund_25px.png" />
+    <None Include="Resources\lifecycle_25px.png" />
+    <None Include="Resources\lifecycle_filled_25px.png" />
+    <None Include="Resources\plus_filled_25px.png" />
+    <None Include="Resources\plus_25px.png" />
+    <None Include="Resources\save_16px.png" />
+    <None Include="Resources\cancel_filled_16px Hover Total.png" />
+    <None Include="Resources\cancel_16px hover.png" />
+    <None Include="Resources\cancel_16px normal.png" />
+    <None Include="Resources\cancel_16px.png" />
+    <None Include="Resources\discount_16px.png" />
+    <None Include="Resources\delete_sign_filled_23px.png" />
+    <None Include="Resources\delete_sign_23px.png" />
+    <None Include="Resources\details_popup_filled_20px.png" />
+    <None Include="Resources\details_popup_20px.png" />
+    <None Include="Resources\details_popup_filled_25px.png" />
+    <None Include="Resources\details_popup_25px.png" />
+    <None Include="Resources\details_popup_25px2.png" />
+    <None Include="Resources\details_popup_25px3.png" />
+    <None Include="Resources\circled_user_male_45px.png" />
+    <None Include="Resources\circled_user_female_45px.png" />
+    <None Include="Resources\checkmark_48px.png" />
+    <None Include="Resources\declaraciones.png" />
+    <None Include="Resources\edit_property_48px.png" />
+    <None Include="Resources\accounting_48px.png" />
+    <None Include="Resources\add_user_male_48px.png" />
+    <None Include="Resources\cancel_subscription_48px.png" />
+    <None Include="Resources\callback_48px.png" />
+    <None Include="Resources\call_transfer_48px.png" />
+    <None Include="Resources\customer_support_48px.png" />
+    <None Include="Resources\add_file_48px.png" />
+    <None Include="Resources\delete_file_48px.png" />
+    <None Include="Resources\binoculars_48px.png" />
+    <None Include="Resources\conference_48px.png" />
+    <None Include="Resources\businessman_96px.png" />
+    <None Include="Resources\bulleted_list_96px.png" />
+    <None Include="Resources\circled_user_male_skin_type_1_2_96px.png" />
+    <None Include="Resources\checked_96px.png" />
+    <None Include="Resources\find_user_male_48px.png" />
+    <None Include="Resources\edit_user_male_96px.png" />
+    <None Include="Resources\edit_user_male_48px.png" />
+    <None Include="Resources\Blue.png" />
+    <None Include="Resources\business_96px.png" />
+    <None Include="Resources\cancel_2_48px.png" />
+    <None Include="Resources\add_user_group_woman_man_48px.png" />
+    <None Include="Resources\address_book_15px.png" />
+    <None Include="Resources\address_book_48px.png" />
+    <None Include="Resources\clock_48px.png" />
+    <None Include="Resources\clock_16px1.png" />
+    <None Include="Resources\error_96px.png" />
+    <None Include="Resources\documents_folder_48px.png" />
+    <None Include="Resources\debt_48px.png" />
+    <None Include="Resources\area_chart_48px.png" />
+    <None Include="Resources\details_popup__48px.png" />
+    <None Include="Resources\donate_48px.png" />
+    <None Include="Resources\cancel_96px.png" />
+    <None Include="Resources\end_call_48px.png" />
+    <None Include="Resources\0_circle_48px.png" />
+    <None Include="Resources\1_circle_48px.png" />
+    <None Include="Resources\2_circle_48px.png" />
+    <None Include="Resources\3_circle_48px.png" />
+    <None Include="Resources\4_circle_48px.png" />
+    <None Include="Resources\5_circle_48px.png" />
+    <None Include="Resources\6_circle_48px.png" />
+    <None Include="Resources\7_circle_48px.png" />
+    <None Include="Resources\8_circle_48px.png" />
+    <None Include="Resources\9_circle_48px.png" />
+    <None Include="Resources\asterisk_48px.png" />
+    <None Include="Resources\call_transfer_48px1.png" />
+    <None Include="Resources\end_call_48px1.png" />
+    <None Include="Resources\Bullets - 05.png" />
+    <None Include="Resources\Bullets - 05_Normal.png" />
+    <None Include="Resources\close_pane_48px.png" />
+    <None Include="Resources\briefcase_96px.png" />
+    <None Include="Resources\external_96px.png" />
+    <None Include="Resources\Arrowhead-Right.png" />
+    <None Include="Resources\Arrowhead-Left.png" />
+    <None Include="Resources\christmas_star_48px.png" />
+    <None Include="Resources\circled_chevron_right_24px.png" />
+    <None Include="Resources\circled_chevron_left_24px.png" />
+    <None Include="Resources\add_folder_25px.png" />
+    <None Include="Resources\edit_25px.png" />
+    <None Include="Resources\1_circle_50px.png" />
+    <None Include="Resources\1_circle_filled_50px.png" />
+    <None Include="Resources\2_circle_50px.png" />
+    <None Include="Resources\2_circle_filled_50px.png" />
+    <None Include="Resources\0_circle_50px.png" />
+    <None Include="Resources\0_circle_filled_50px.png" />
+    <None Include="Resources\3_circle_50px.png" />
+    <None Include="Resources\3_circle_filled_50px.png" />
+    <None Include="Resources\4_circle_50px.png" />
+    <None Include="Resources\4_circle_filled_50px.png" />
+    <None Include="Resources\5_circle_50px.png" />
+    <None Include="Resources\5_circle_filled_50px.png" />
+    <None Include="Resources\6_circle_50px.png" />
+    <None Include="Resources\6_circle_filled_50px.png" />
+    <None Include="Resources\7_circle_50px.png" />
+    <None Include="Resources\7_circle_filled_50px.png" />
+    <None Include="Resources\8_circle_50px.png" />
+    <None Include="Resources\8_circle_filled_50px.png" />
+    <None Include="Resources\9_circle_50px.png" />
+    <None Include="Resources\9_circle_filled_50px.png" />
+    <None Include="Resources\briefcase_48px.png" />
+    <None Include="Resources\alarm_clock_99px.png" />
+    <None Include="Resources\appointment_reminders_20px.png" />
+    <None Include="Resources\appointment_reminders_15px.png" />
+    <None Include="Resources\alarm_clock_17px.png" />
+    <None Include="Resources\crowdfunding_15px.png" />
+    <None Include="Resources\7a8cbb7079d70bd64c469435a71b4db9.gif" />
+    <None Include="Resources\file_48px.png" />
+    <None Include="Resources\edit_property_48px1.png" />
+    <None Include="Resources\combo_chart_48px.png" />
+    <None Include="Resources\banorte.png" />
+    <None Include="Resources\bbva.png" />
+    <None Include="Resources\bbval.png" />
+    <None Include="Resources\bbvalp.png" />
+    <None Include="Resources\banorte1.png" />
+    <None Include="Resources\bancomer.png" />
+    <None Include="Resources\8s_3eZNf_400x400.jpg" />
+    <None Include="Resources\add_ticket_48px.png" />
+    <None Include="Resources\delete_archive_20px.png" />
+    <None Include="Resources\database_20px.png" />
+    <None Include="Resources\delete_sign_18px.png" />
+    <None Include="Resources\delete_sign_13px.png" />
+    <None Include="Resources\checkmark_13px.png" />
+    <None Include="Resources\clock_13px.png" />
+    <None Include="Resources\external_16px.png" />
+    <None Include="Resources\checked_2_16px.png" />
+    <None Include="Resources\cell_phone_16px.png" />
+    <None Include="Resources\filled_star_16px.png" />
+    <None Include="Resources\angle_left_24px.png" />
+    <None Include="Resources\angle_right_24px.png" />
+    <None Include="Resources\download_24px.png" />
+    <None Include="Resources\delete_24px.png" />
+    <None Include="Resources\cell_phone_15px.png" />
+    <Content Include="Resources\FormatoRecibo.xlsm" />
+    <None Include="Resources\microphone_16px.png" />
+    <None Include="Resources\new_moon_filled_10px.png" />
+    <None Include="Resources\new_moon_filled_12px.png" />
+    <None Include="Resources\new_moon_filled_14px.png" />
+    <None Include="Resources\clock_16px.png" />
+    <None Include="Resources\phone_16px.png" />
+    <None Include="Resources\phone_18px.png" />
+    <None Include="Resources\phone_25px.png" />
+    <None Include="Resources\clock_25px.png" />
+    <None Include="Resources\stop_25px.png" />
+    <None Include="Resources\pause_25px.png" />
+    <None Include="Resources\play_25px.png" />
+    <None Include="Resources\Check-01.png" />
+    <None Include="Resources\Check-04-WF.png" />
+    <None Include="Resources\Payments-01-WF.png" />
+    <None Include="Resources\Print-02-WF.png" />
+    <None Include="Resources\search_25px.png" />
+    <None Include="Resources\sent_25px.png" />
+    <None Include="Resources\sent_100px.png" />
+    <None Include="Resources\Close-WF.png" />
+    <None Include="Resources\Backward-WF.png" />
+    <None Include="Resources\Next-02-WF.png" />
+    <None Include="Resources\Adobe-PDF-Export.png" />
+    <None Include="Resources\Microsoft-Word-New.png" />
+    <None Include="Resources\Excel-Export.png" />
+    <None Include="Resources\DataImport-WF.png" />
+    <None Include="Resources\User-Refresh.png" />
+    <None Include="Resources\Search-WF.png" />
+    <None Include="Resources\LexaSIO-Logotipo.png" />
+    <None Include="Resources\File Upload1.png" />
+    <None Include="Resources\File Upload.png" />
+    <None Include="Resources\ToolbarYellow.png" />
+    <None Include="Resources\ToolbarRed.png" />
+    <None Include="Resources\ToolbarGreen.png" />
+    <None Include="Resources\CircledYellow.png" />
+    <None Include="Resources\CircledRed.png" />
+    <None Include="Resources\CircledGreen.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

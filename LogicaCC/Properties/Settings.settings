@@ -1,0 +1,58 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LogicaCC.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DbServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">lexa.sytes.net\LXDB</Value>
+    </Setting>
+    <Setting Name="DbUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Lex@dm16</Value>
+    </Setting>
+    <Setting Name="DbPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LX@020616</Value>
+    </Setting>
+    <Setting Name="DbMedic" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MPY</Value>
+    </Setting>
+    <Setting Name="DbMedicAlimentos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MPYALIMENTOS</Value>
+    </Setting>
+    <Setting Name="DbMedicConta" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MPYCONTA</Value>
+    </Setting>
+    <Setting Name="DbMedicOpera" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MPYOPERA</Value>
+    </Setting>
+    <Setting Name="DbMedicCSJDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MPYCSJDB</Value>
+    </Setting>
+    <Setting Name="LXCCConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)" />
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ProDbMedic" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PRO$MPY</Value>
+    </Setting>
+    <Setting Name="ProDbMedicAlimentos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PRO$MPYALIMENTOS</Value>
+    </Setting>
+    <Setting Name="ProDbMedicConta" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PRO$MPYCONTA</Value>
+    </Setting>
+    <Setting Name="ProDbMedicOpera" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PRO$MPYOPERA</Value>
+    </Setting>
+    <Setting Name="ProDbMedicCSJDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PRO$MPYCSJDB</Value>
+    </Setting>
+    <Setting Name="MainFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mpytstr</Value>
+    </Setting>
+    <Setting Name="ProMainFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mpyprdctn</Value>
+    </Setting>
+    <Setting Name="DefaultConnection" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

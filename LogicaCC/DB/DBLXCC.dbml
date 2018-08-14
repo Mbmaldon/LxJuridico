@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LXCC" Class="DBLXCCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=COORDESARROLLO;Initial Catalog=LXCC;Integrated Security=True" SettingsObjectName="LogicaCC.Properties.Settings" SettingsPropertyName="LXCCConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Estado" Member="Estado">
+    <Type Name="Estado">
+      <Column Name="IdEstado" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Estado" Member="Estado1" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaCreacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServicioStatus" Member="ServicioStatus">
+    <Type Name="ServicioStatus">
+      <Column Name="IdServicioStatus" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUsuarioCreacion" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ServicioStatus" Member="ServicioStatus1" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaCreacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServicioTipo" Member="ServicioTipo">
+    <Type Name="ServicioTipo">
+      <Column Name="IdServicioTipo" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUsuarioCreacion" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ServicioTipo" Member="ServicioTipo1" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaCreacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeclaracionEstado" Member="DeclaracionEstado">
+    <Type Name="DeclaracionEstado">
+      <Column Name="IdDeclaracionEstado" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeclaracionEstado" Member="DeclaracionEstado1" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Periodo" Member="Periodo">
+    <Type Name="Periodo">
+      <Column Name="IdPeriodo" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Periodo" Member="Periodo1" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeclaracionTipo" Member="DeclaracionTipo">
+    <Type Name="DeclaracionTipo">
+      <Column Name="IdDeclaracionTipo" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeclaracionTipo" Member="DeclaracionTipo1" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.LXCCSPS_VALIDAR_USUARIO" Method="LXCCSPS_VALIDAR_USUARIO">
+    <Parameter Name="User" Parameter="user" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(45)" />
+    <ElementType Name="LXCCSPS_VALIDAR_USUARIOResult">
+      <Column Name="IdUsuario" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuarioTipo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="APaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="AMaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LXCCSPS_LISTA_USUARIOS" Method="LXCCSPS_LISTA_USUARIOS">
+    <Parameter Name="IdUsuarioTipo" Parameter="idUsuarioTipo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LXCCSPS_LISTA_USUARIOSResult">
+      <Column Name="IdUsuario" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuarioTipo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="APaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="AMaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LXCCSPS_CLIENTE_INFO" Method="LXCCSPS_CLIENTE_INFO">
+    <Parameter Name="Cliente" Parameter="cliente" Type="System.String" DbType="NVarChar(45)" />
+    <ElementType Name="LXCCSPS_CLIENTE_INFOResult">
+      <Column Name="Cliente" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RFC" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="APaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="AMaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Municipio" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="IdEstado" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoPostal" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroLocal" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Extension" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="CorreoElectronico" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="IdServicioTipo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdServicioStatus" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FechaContratado" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IdContadorAsignado" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdCliente" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LXCCSPU_ALTA_ACT_CLIENTE" Method="LXCCSPU_ALTA_ACT_CLIENTE">
+    <Parameter Name="Cliente" Parameter="cliente" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="IdEstado" Parameter="idEstado" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="APaterno" Parameter="aPaterno" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="AMaterno" Parameter="aMaterno" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="RFC" Parameter="rFC" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="Municipio" Parameter="municipio" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="CP" Parameter="cP" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="TelefonoL" Parameter="telefonoL" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Extension" Parameter="extension" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="TelefonoM" Parameter="telefonoM" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="CorreoE" Parameter="correoE" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="IdServEstatus" Parameter="idServEstatus" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="idServicioTipo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="FechaContr" Parameter="fechaContr" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaVenci" Parameter="fechaVenci" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="IdContadorAsignado" Parameter="idContadorAsignado" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="NombreC1" Parameter="nombreC1" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="APaternoC1" Parameter="aPaternoC1" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="AMaternoC1" Parameter="aMaternoC1" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="TelefonoLC1" Parameter="telefonoLC1" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="ExtensionC1" Parameter="extensionC1" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="TelefonoMC1" Parameter="telefonoMC1" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="CorreoEC1" Parameter="correoEC1" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="NombreC2" Parameter="nombreC2" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="APaternoC2" Parameter="aPaternoC2" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="AMaternoC2" Parameter="aMaternoC2" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="TelefonoLC2" Parameter="telefonoLC2" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="ExtensionC2" Parameter="extensionC2" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="TelefonoMC2" Parameter="telefonoMC2" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="CorreoEC2" Parameter="correoEC2" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LXCCSPS_CONTACTOS_AUT" Method="LXCCSPS_CONTACTOS_AUT">
+    <Parameter Name="IdCliente" Parameter="idCliente" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LXCCSPS_CONTACTOS_AUTResult">
+      <Column Name="IdClienteContactoAut" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="APaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="AMaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="TelefonoLocal" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Extension" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TelefonoMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="CorreoElectronico" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LXCCSPS_LISTADO_MOTIVO_LLAMADA" Method="LXCCSPS_LISTADO_MOTIVO_LLAMADA">
+    <ElementType Name="LXCCSPS_LISTADO_MOTIVO_LLAMADAResult">
+      <Column Name="IdCasoMotivo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Motivo" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LXCCSPI_CASO_NUEVO" Method="LXCCSPI_CASO_NUEVO">
+    <Parameter Name="IdUsuarioCreacion" Parameter="idUsuarioCreacion" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdCaso" Parameter="idCaso" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LXCCSPU_CASO_ACT" Method="LXCCSPU_CASO_ACT">
+    <Parameter Name="IdCasoMotivo" Parameter="idCasoMotivo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdCliente" Parameter="idCliente" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdUsuarioCreacion" Parameter="idUsuarioCreacion" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IdCaso" Parameter="idCaso" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LXCCSPI_CREAR_MENSAJE" Method="LXCCSPI_CREAR_MENSAJE">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdCliente" Parameter="idCliente" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdMensajeTipo" Parameter="idMensajeTipo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Mensaje" Parameter="mensaje" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LXCCSPS_LISTA_CLIENTE_ASIGNADOS" Method="LXCCSPS_LISTA_CLIENTE_ASIGNADOS">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="LXCCSPS_LISTA_CLIENTE_ASIGNADOSResult">
+      <Column Name="CorreoElectronico" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LXCCSPS_BUSCAR_CLIENTE" Method="LXCCSPS_BUSCAR_CLIENTE">
+    <Parameter Name="Cliente" Parameter="cliente" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Rfc" Parameter="rfc" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="LXCCSPS_BUSCAR_CLIENTEResult">
+      <Column Name="IdCliente" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdClienteInformacion" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IdContadorAsignado" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="APaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="AMaterno" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="CorreoElectronico" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroMovil" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LXDECSPI_ALTA_DECLARACION" Method="LXDECSPI_ALTA_DECLARACION">
+    <Parameter Name="IdCliente" Parameter="idCliente" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdPeriodo" Parameter="idPeriodo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdDeclaracionTipo" Parameter="idDeclaracionTipo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdDeclaracionEstado" Parameter="idDeclaracionEstado" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="AñoDeclaracion" Parameter="añoDeclaracion" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="LineaCaptura" Parameter="lineaCaptura" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="NumOperacion" Parameter="numOperacion" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="Monto" Parameter="monto" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="LlavePago" Parameter="llavePago" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="FechaLimitePago" Parameter="fechaLimitePago" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="FechaPresentacion" Parameter="fechaPresentacion" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

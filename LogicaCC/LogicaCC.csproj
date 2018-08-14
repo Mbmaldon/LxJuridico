@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A421D64B-4E8A-4859-87DD-3DB9CF52C49C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogicaCC</RootNamespace>
+    <AssemblyName>LogicaCC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="Conv.cs" />
+    <Compile Include="DB\DataEstadoPago.cs">
+      <DependentUpon>DataEstadoPago.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DataEstadoPago.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEstadoPago.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBLXCC.cs">
+      <DependentUpon>DBLXCC.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBLXCC.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLXCC.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DB\LXCCDataSet.cs">
+      <DependentUpon>LXCCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FTPCredentials.cs" />
+    <Compile Include="FTPDownload.cs" />
+    <Compile Include="FTPListDetail.cs" />
+    <Compile Include="FTPServer.cs" />
+    <Compile Include="LexaSIOContaLogica\Adjunto.cs" />
+    <Compile Include="LexaSIOContaLogica\Categoria.cs" />
+    <Compile Include="LexaSIOContaLogica\Cliente.cs" />
+    <Compile Include="LexaSIOContaLogica\Concepto.cs" />
+    <Compile Include="LexaSIOContaLogica\Declaracion.cs" />
+    <Compile Include="LexaSIOContaLogica\DetalleObligacion.cs" />
+    <Compile Include="LexaSIOContaLogica\Diagnostico.cs" />
+    <Compile Include="LexaSIOContaLogica\RegistroConcepto.cs" />
+    <Compile Include="LexaSIOContaLogica\RegistroObligacion.cs" />
+    <Compile Include="LexaSIOContaLogica\TipoLlamada.cs" />
+    <Compile Include="LexaSIOContaLogica\TipoPersona.cs" />
+    <Compile Include="LexaSIOContaLogica\Usuario.cs" />
+    <Compile Include="LexaSIOOperLogica\Bono.cs" />
+    <Compile Include="LexaSIOOperLogica\CatalogoVendedores.cs" />
+    <Compile Include="LexaSIOOperLogica\Comision.cs" />
+    <Compile Include="LexaSIOOperLogica\Comisionista.cs" />
+    <Compile Include="LexaSIOOperLogica\ComisionVendedor.cs" />
+    <Compile Include="LexaSIOOperLogica\ConcentradoAlimentos.cs" />
+    <Compile Include="LexaSIOOperLogica\Conciliacion.cs" />
+    <Compile Include="LexaSIOOperLogica\Cuenta.cs" />
+    <Compile Include="LexaSIOOperLogica\Dispersion.cs" />
+    <Compile Include="LexaSIOOperLogica\InformacionVendedor.cs" />
+    <Compile Include="LexaSIOOperLogica\LimiteInferior.cs" />
+    <Compile Include="LexaSIOOperLogica\Nivel.cs" />
+    <Compile Include="LexaSIOOperLogica\Operacion.cs" />
+    <Compile Include="LexaSIOOperLogica\OperacionComisionista.cs" />
+    <Compile Include="LexaSIOOperLogica\Pago.cs" />
+    <Compile Include="LexaSIOOperLogica\PapelTrabajo.cs" />
+    <Compile Include="LexaSIOOperLogica\Premio.cs" />
+    <Compile Include="LexaSIOOperLogica\Reportes\Operaciones.cs" />
+    <Compile Include="LexaSIOOperLogica\Reportes\RBonosVendedores.cs" />
+    <Compile Include="LexaSIOOperLogica\Reportes\RComisionesVendedores.cs" />
+    <Compile Include="LexaSIOOperLogica\Reportes\RIngresosCliente.cs" />
+    <Compile Include="LexaSIOOperLogica\Reportes\RRemenanente.cs" />
+    <Compile Include="LexaSIOOperLogica\SocioComanditario.cs" />
+    <Compile Include="LexaSIOOperLogica\TipoFactura.cs" />
+    <Compile Include="LexaSIOOperLogica\Vendedor.cs" />
+    <Compile Include="LexaSIOOperLogica\VendedorBusqueda.cs" />
+    <Compile Include="LexaSIOOperLogica\VendedorLXCC.cs" />
+    <Compile Include="Logica\Adjunto.cs" />
+    <Compile Include="Logica\Caso.cs" />
+    <Compile Include="Logica\CasoActualizar.cs" />
+    <Compile Include="Logica\CasoHistorial.cs" />
+    <Compile Include="Logica\CasoMotivo.cs" />
+    <Compile Include="Logica\CasoNuevo.cs" />
+    <Compile Include="Logica\Cita.cs" />
+    <Compile Include="Logica\Cliente.cs" />
+    <Compile Include="Logica\ClienteActInfo.cs" />
+    <Compile Include="Logica\ClienteBuscar.cs" />
+    <Compile Include="Logica\ClienteData.cs" />
+    <Compile Include="Logica\ClienteInfoSMS.cs" />
+    <Compile Include="Logica\ClientesAsignados.cs" />
+    <Compile Include="Logica\ContactoAut.cs" />
+    <Compile Include="Logica\ContactoData.cs" />
+    <Compile Include="Logica\DeclaracionAlta.cs" />
+    <Compile Include="Logica\DeclaracionEstado.cs" />
+    <Compile Include="Logica\DeclaracionTipo.cs" />
+    <Compile Include="Logica\EquipoContable.cs" />
+    <Compile Include="Logica\Estados.cs" />
+    <Compile Include="DB\LXCCDataSet.Designer.cs">
+      <DependentUpon>LXCCDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Logica\Genero.cs" />
+    <Compile Include="Logica\Grupo.cs" />
+    <Compile Include="Logica\Llamada.cs" />
+    <Compile Include="Logica\LlamadaProspeccion.cs" />
+    <Compile Include="Logica\Mensaje.cs" />
+    <Compile Include="Logica\MensajeCrear.cs" />
+    <Compile Include="Logica\Prospeccion.cs" />
+    <Compile Include="Logica\Prospecto.cs" />
+    <Compile Include="Logica\Regimen.cs" />
+    <Compile Include="Logica\Servicio.cs" />
+    <Compile Include="Logica\ServicioE.cs" />
+    <Compile Include="Logica\ServicioT.cs" />
+    <Compile Include="Logica\Sucursal.cs" />
+    <Compile Include="Logica\Supervisor.cs" />
+    <Compile Include="Logica\Usuario.cs" />
+    <Compile Include="Logica\UsuarioData.cs" />
+    <Compile Include="Logica\UsuarioInfo.cs" />
+    <Compile Include="Logica\UsuarioLinea.cs" />
+    <Compile Include="Logica\UsuarioLista.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB\DataEstadoPago.xsc">
+      <DependentUpon>DataEstadoPago.xsd</DependentUpon>
+    </None>
+    <None Include="DB\DataEstadoPago.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataEstadoPago.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DB\DataEstadoPago.xss">
+      <DependentUpon>DataEstadoPago.xsd</DependentUpon>
+    </None>
+    <None Include="DB\DBLXCC.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBLXCC.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB\LXCCDataSet.xsc">
+      <DependentUpon>LXCCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB\LXCCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LXCCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB\LXCCDataSet.xss">
+      <DependentUpon>LXCCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DB\DBLXCC.dbml.layout">
+      <DependentUpon>DBLXCC.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
